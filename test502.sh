@@ -6,7 +6,7 @@ THREADS="$(nproc --all)"
 
 touch /tmp/at.txt
 echo 'sudo reboot -f' >> /tmp/at.txt
-at now + 24 hours < /tmp/at.txt
+at now + 12 hours < /tmp/at.txt
 echo -e 'Restart job specified'
 sleep 3
 
