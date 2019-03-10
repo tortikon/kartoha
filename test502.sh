@@ -11,7 +11,7 @@ echo -e 'Restart job specified'
 sleep 3
 
 
-rm -rf /tmp/kartoha/
+sudo rm -rf /tmp/kartoha/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 sudo dpkg --configure -a
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
@@ -23,7 +23,7 @@ git clone https://github.com/tortikon/kartoha.git /tmp/kartoha
 cd /tmp/kartoha
 chmod +x /tmp/kartoha/kartoha
 chmod 777 ./*.sh
-cp /tmp/kartoha/kartoha /usr/bin/
+sudo cp /tmp/kartoha/kartoha /usr/bin/
 sleep 3
 
 
